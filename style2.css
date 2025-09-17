@@ -20,7 +20,6 @@
 .toggle-container{
     display: flex;
     align-items: center;
-    margin:auto;
 }
 .pricing-toggle .toggle-option{
     margin: 0 0.5rem;
@@ -333,3 +332,4 @@ form p span{
     text-decoration-line: underline;
 
 }
+
