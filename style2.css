@@ -1,0 +1,333 @@
+/* Pricing Plans Styling */
+.services{
+    text-align: center;
+    padding: 2rem 1rem;
+    z-index: 1;
+    background-color: hsl(0, 0%, 5%);
+}
+.services h2{
+    margin-bottom: 2rem;
+    font-size:4rem;
+    color:#fff;
+}
+.pricing-toggle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1rem;
+}
+.toggle-container{
+    display: flex;
+    align-items: center;
+}
+.pricing-toggle .toggle-option{
+    margin: 0 0.5rem;
+    font-size: 1rem;
+    color: white;
+}
+.pricing-toggle .save-percentage-container{
+    width: 100px;
+    display: flex;
+    justify-content: center;
+}
+.pricing-toggle .save-percentage{
+    display: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #0ce48d;
+}
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+}
+.switch input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+.slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 30px;
+}
+.slider::before{
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    bottom: 4px;
+    left: 4px;
+    background-color: #fff;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+input:checked + .slider{
+    background-color: #0ce48d;
+}
+input:focus + .slider{
+    box-shadow: 0 0 3px #0ce48d;
+}
+input:checked + .slider::before{
+    transform: translateX(30px);
+}
+
+.services_container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    padding: 0 75px;
+    flex-direction: row;
+    width: 100%;
+    height: 90vh;
+}
+.services_card{
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 1rem 1rem;
+    line-height: 2;
+    text-align: center;
+    background-color:#fff;
+    /* display: flex;
+    flex-direction: column; */
+    border: 1px solid white;
+    width: 30%;
+    height: 90%;
+    min-height: fit-content;
+    color:#000;
+    box-shadow:0 0 20px#0ce48d;
+}
+.card-content h3{
+    font-size: 1.5rem;
+    color: hsl(156, 90%, 37%);
+}
+.card_price .hidden{
+    display: none;
+}
+.card_price .price{
+    font-size:1.5rem;
+    font-weight: bold
+}
+.card_price a{
+    font-size:1.25rem;
+    font-weight: bold;
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 20px;
+    background-color: hsl(156, 90%, 37%);
+    line-height:2;
+    transition: all 0.25s ease;
+}
+.card_price a:hover{
+    background-color: hsl(156, 90% ,47%);
+}
+.card_price #small-desc{
+    font-weight:bold;
+    margin-top:20px;
+}
+.card-features{
+    text-align:left;
+}
+.card-features p{
+    font-size: 1.25rem;
+    font-weight:bold;
+}
+.card-features li{
+    color:hsl(0, 0%, 20%);
+    font-weight:bold;
+}
+
+/* Pricing Plans Mobile */
+
+@media (max-width: 968px) {
+    .services_container{
+        flex-direction: column;
+        align-items: center;
+        height: fit-content;
+    }
+    .services_card{
+        width: 100%;
+        max-width:400px;
+        padding: 1rem 2rem;
+        margin: 0.5rem 0;
+        height: fit-content;
+        min-height: 70vh;
+    }
+    .services h2{
+        font-size: 3rem;
+    }
+    .pricing-toggle{
+        margin-bottom: 0.75rem;
+        flex-direction: column;
+    }
+}
+@media ( 1096px >= width > 968px) {
+    .services_container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    height: fit-content;
+    }
+    .services_card{
+        width:45%;
+        max-width: 400px;
+        padding: 1rem 2rem;
+        margin: 0.5rem 0;
+        min-height: 400px;
+    }
+    .services h2{
+        font-size: 3rem;
+    }
+    .pricing-toggle{
+        margin-bottom: 0.75rem;
+        flex-direction: column;
+    }
+}
+
+/* Footer Styling */
+
+footer{
+    display: flex;
+    flex-direction: column;
+    background-color: #000;
+    border-top: 1px solid hsl(125, 90%, 47%) ;
+}
+.main-footer{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    min-height: max-content;
+    height: 25vh;
+    margin:20px 0 ;
+}
+.list{
+    text-align: left;
+    line-height: 1.5;
+    font-weight: bold;
+}
+.list h3{
+    font-size: 1.5rem;
+    color: hsl(125, 90%, 47%);
+}
+.list ul{
+    padding: 10px 0 0 0;
+    
+}
+.list ul li{
+    overflow-x: hidden;
+    width: fit-content;
+}
+.list ul li a{
+    text-decoration: none;
+    color: hsl(0,0%,70%);
+        transition: all 0.1s ease;
+}
+.list ul li a:hover{
+    color: hsl(125, 90%, 47%);
+}
+
+.bottom-footer{
+    margin-top: 5px;
+    padding: 40px 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: #ccc;
+    font-size: 1.1rem;
+    width: 100%;
+    height: fit-content;
+    max-height: 15vh;
+    background-color:hsl(0, 0%, 15%)
+}
+.bottom-icons a{
+    color: hsl(125, 90%, 47%);
+}
+
+/* Form Styling */
+
+form{
+    border: 1px solid;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    margin: 10px auto;
+    padding: 10px 20px 30px;
+    height: fit-content;
+    min-height: 90vh;
+    max-width: 400px;
+    background-color: #f1f1f1;
+    box-shadow: 0 0 15px hsl(125, 90%, 47%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+.hidden{
+    display: none;
+}
+form h2{
+    font-size: 2rem;
+    color: hsl(125, 90%, 37%);
+}
+form .field{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 10px 0;
+    font-size: 1.1rem;
+    line-height: 1.5;
+    width: 80%;
+}
+form .field label{
+    color: hsl(0, 0%, 20%);
+}
+form .field input, form .field select{
+    width: 100%;
+    text-align: left;
+    font-size: 1.1rem;
+    border: 0.5px grey solid;
+    height: 25px;
+    border-radius: 5px;
+    padding: 5px 10px ;
+}
+form .field select{
+    height: 35px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+form button{
+    border: none;
+    width: 80%;
+    font-size: 1.2rem;
+    padding: 10px;
+    margin-top: 10px;
+    background-color: hsl(125, 90%, 37%);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.1s ease;
+}
+form button:hover{
+    background-color:hsl(125, 90%, 47%);
+}
+form button:active{
+    background-color: hsl(125, 90%, 27%);
+}
+form p span, form p a{
+    color: hsl(125, 90%, 37%);
+}
+form p span{
+    cursor: pointer;
+    text-decoration-line: underline;
+}
