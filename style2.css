@@ -253,7 +253,27 @@ footer{
 .bottom-icons a{
     color: hsl(125, 90%, 47%);
 }
-
+/* Footer Styling Mobile */
+@media ( 800px >= width) {
+    .list{
+        font-weight: 400;
+    }
+    .list h3{
+    font-size: 1rem;
+    color: hsl(125, 90%, 47%);
+    }
+    .bottom-footer{
+        margin:0;
+        padding:0;
+        line-height: 1.5;
+        font-size: 1em;
+        height: fit-content;
+        flex-direction: column;
+    }
+    .bottom-icons a{
+    font-size: 1.3rem
+    }
+}
 /* Form Styling */
 
 form{
@@ -332,4 +352,5 @@ form p span{
     text-decoration-line: underline;
 
 }
+
 
